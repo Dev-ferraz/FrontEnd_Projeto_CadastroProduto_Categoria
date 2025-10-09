@@ -1,0 +1,292 @@
+/* ==============================
+   Estilos Página Cadastro de Categoria
+   ============================== */
+
+
+
+/* Animação pulsante */
+@keyframes brilho-pulsante {
+   0% {
+    filter: drop-shadow(0 0 6px #ffffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 13px #32bcad);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #32bcad);
+  }
+}
+
+
+
+/* ===== Cabeçalho fixo ===== */
+
+.sticky-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #222;
+  box-shadow: 0px 4px 10px  #32bcad;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-escrita {
+  width: 52px;
+  height: auto;
+  position: relative;
+  top: 2px ;
+}
+
+.work {
+  font-weight: bold;
+  color: #dadada;    
+  font-size: 15px;
+  position: relative;
+  top: -5px;
+  right: 18px;
+}
+
+
+
+/* Wrapper do botão Voltar */
+.voltar-btn-wrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, filter 0.3s ease, background 0.3s ease;
+  
+}
+
+/* Ícone Voltar */
+.voltar-btn-icon {
+  width: 20px;
+  height: 28px;
+  color: #dadada;
+  transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+}
+
+
+
+.voltar-btn-wrapper:hover .voltar-btn-icon {
+  color: #ffffff;
+  transform: scale(1.2);
+  
+}
+
+.voltar-btn-icon.pulsante {
+  animation: voltar-icon-pulse 2s infinite;
+  
+}
+
+/* Espaço para não deixar o conteúdo invadir o header */
+body {
+  padding-top: 100px; /* altura aproximada do header */
+}
+
+/* Ícone de logout */
+.logout-icon-wrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+   
+/* Efeito de brilho pulsante para logo */
+@keyframes brilho-pulsante-categoria {
+  0% { filter: drop-shadow(0 0 6px #ffffff); }
+  50% { filter: drop-shadow(0 0 13px #32bcad); }
+  100% { filter: drop-shadow(0 0 6px #32bcad); }
+}
+
+/* Logo Boas-Vindas */
+.logo-boas-vindas {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo-img-boas-vindas {
+  width: 103px;
+  height: auto;
+  filter: drop-shadow(0px 0px 6px #32bcad);
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+  animation: brilho-pulsante-categoria 2s infinite;
+
+}
+
+.logo-img-boas-vindas:hover {
+  transform: scale(1.1);
+}
+/* Caixa principal */
+.box-boas-vindas {
+ background: #222;
+  padding: 5.5rem 2.2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 4px 10px #32bcad;
+  width: 100%;
+  max-width: 600px; /* <-- largura aumentada */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 1px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* animação suave */
+   height: 630px; /* altura fixa, ajuste conforme necessidade */
+
+
+}
+
+/* Hover */
+.box-boas-vindas:hover {
+  transform: translateY(-1px);
+ 
+}
+
+/* Título da página */
+.box-boas-vindas h2 {
+  font-size: 1.8rem;
+  color: #32bcad;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+ 
+  position: relative;
+  top: -150px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Logo Categoria */
+.logo-categoria {
+  text-align: center;      /* centraliza a logo */
+  margin-bottom: 1.5rem;   /* espaço abaixo da logo */
+}
+
+.logo-img-categoria {
+  width: 105px;            /* largura da logo */
+  height: auto;
+  filter: drop-shadow(0 0 6px #32bcad); /* sombra suave */
+  animation: brilho-pulsante 2s infinite; /* efeito pulsante */
+  transition: transform 0.3s ease;
+  position: relative;
+  top: 70px;
+}
+
+.logo-img-categoria:hover {
+  transform: scale(1.1);   /* zoom leve ao passar o mouse */
+}
+
+
+
+/* Inputs */
+input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.6rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0px 2px 5px #32bcad;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  text-align: left;
+   font-family: 'Roboto', sans-serif;
+  position: relative;
+  top: 15px;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+input[type="text"]:focus {
+  background: #444;
+  box-shadow: 0px 0px 6px #ffffff;
+}
+
+/* Botão Cadastrar */
+button[type="submit"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.7rem;
+
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  background:  #32bcad;
+  color: #1a1a1a;
+  transition: background 0.1s ease, transform 0.1s ease, filter 0.1s ease;
+  position: relative;
+  top: 38px;
+}
+
+button[type="submit"]:hover {
+  background:  #32bcad;
+  transform: scale(1.04);
+  filter: drop-shadow(0px 0px 10px #000000);
+}
+
+/* Botão Ir para Produtos */
+.btn-ir-produtos {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none; /* tira o sublinhado */
+  cursor: pointer;
+  background: #ffffff;
+  color: #1a1a1a;
+  transition: background 0.1s ease, transform 0.1s ease, filter 0.1s ease;
+  position: relative;
+  top: 35px; /* ajusta conforme seu layout */
+}
+
+.btn-ir-produtos:hover {
+  background: rgb(255, 255, 255);
+  color: #000000;
+  transform: scale(1.04);
+  filter: drop-shadow(0px 0px 10px #000000);
+}
+
+
+.label-categoria {
+  font-family: 'Roboto', sans-serif;
+  color: #e4e4e4;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+  position: relative;
+  top: 1px; /* ajuste fino de posicionamento */
+  
+  font-size: 15px;
+  font-weight: 400;       /* mais fino que o normal (400) */
+  letter-spacing: 0.5px;  /* espaçamento suave entre letras */
+}

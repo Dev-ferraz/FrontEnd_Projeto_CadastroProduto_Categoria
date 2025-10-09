@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Página API_Workspace</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/Components_style_css/reset.css">
+  <link rel="stylesheet" href="/Components_style_css/typograph.css">
+  <link rel="stylesheet" href="/Components_style_css/07_PG_workspace.css">
+
+  <!-- Script principal -->
+ <script type="module" src="/Components_Js/07_PG_workspace.js"></script>
+</head>
+<body>
+  
+
+  <!-- Cabeçalho fixo no topo -->
+  <div class="sticky-header">
+    <div class="header-container">
+      <p><span class="work">WorkSpace</span></p>
+
+      <span class="logout-icon-wrapper" onclick="logout()" title="Sair">
+        <svg class="logout-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 
+                   2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 
+                   0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+        </svg>
+      </span>
+    </div>
+  </div>
+
+ 
+
+  <!-- Caixa principal -->
+  <div class="box-01" data-aos="">
+    <!-- Título -->
+    <div class="stylenNome">
+      <h5>Gerenciar Sistema</h5>
+     
+
+    </div>
+
+          <!-- IMAGEM DE OPÇÃO -->
+<div class="opcao-imagem">
+    <img src="/Components_imgs_site/PG_07_work.svg" alt="" class="opcao-img" data-aos="">
+</div>
+
+ <!-- Botões de Ação -->
+<div class="btn-container">
+  <label for="nome" class="form-label-opcao">Escolha uma opção</label>
+
+  <button type="button" class="cadastrar-entrar"
+          onclick="window.location.href='PG_workSpace/CadastroCategorias.html'">
+    📂 Cadastrar Categoria
+  </button>
+
+  <button type="button" class="cadastrar-entrar"
+          onclick="window.location.href='PG_workSpace/CadastroProdutos.html'">
+    📦 Cadastrar Produto
+  </button>
+</div>
+
+
+  </div>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("token"); // Remove o token
+      window.location.href = "/API_html/01_PG_login.html"; 
+    }
+  </script>
+
+  <!-- Biblioteca JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Inicialização do AOS -->
+  <script>
+    AOS.init({
+      duration: 2000,
+      disable: 'mobile'
+    });
+  </script>
+
+</body>
+</html>

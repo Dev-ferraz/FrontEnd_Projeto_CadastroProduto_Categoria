@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Estilos -->
+<link rel="stylesheet" href="/Components_style_css/reset.css">
+<link rel="stylesheet" href="/Components_style_css/typograph.css">
+<link rel="stylesheet" href="/Components_style_css/02_PG_newUsuario.css">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- Script principal -->
+<script type="module" src="/Components_Js/02_PG_newUsuario.js"></script>
+
+<title>Pagina API_NewCadastro</title>
+</head>
+<body>
+    <div class="logo-cadastro">
+        <img src="/Components_imgs_site/PG_02-cadastro_usuario.svg" alt="Logo da empresa" class="logo-img-cadastro" data-aos="zoom-in-down" />
+    </div>
+    
+    <div class="box-new" data-aos="fade-down">
+
+        <div class="stylenNome" data-aos="zoom-out">
+            <h1>CADASTRO</h1>
+        </div>
+
+        <form action="" class="cadastro-form">
+            <!-- Nome -->
+            <label for="nome"></label>
+            <input type="text" id="nome" class="nome" name="nome" placeholder="Nome:" required />
+
+            <!-- Senha -->
+            <label for="senha"></label>
+            <input type="password" id="senha" class="senha" name="senha" placeholder="Senha:" required />
+            <span id="toggleSenha" class="toggle-senha">
+                <i class="bi bi-eye-fill"></i>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+            </span>
+
+            <!-- Email -->
+            <label for="email"></label>
+            <input type="email" id="email" class="email" name="email" placeholder="Email:" required />
+        
+           <!-- Links -->
+           <a href="/API_html/01_PG_login.html" class="sou-cadastrado">Já tenho cadastro!</a>
+           <a href="/API_html/03_PG_verificarCadastro.html" class="verificao-cadastrado">Verificar Cadastro!</a>
+
+            <!-- Botão -->
+            <button type="submit" class="botao-cadastrar">Efetuar Cadastro</button>
+        </form>
+
+    </div>
+
+    <!-- Biblioteca JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 2000, 
+            disable: 'mobile'
+        });
+    </script>
+</body>
+</html>

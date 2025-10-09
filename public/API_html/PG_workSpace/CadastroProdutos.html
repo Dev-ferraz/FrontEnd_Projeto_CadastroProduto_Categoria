@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API_CadastroProduto</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/Components_style_css/reset.css">
+  <link rel="stylesheet" href="/Components_style_css/typograph.css">
+  <link rel="stylesheet" href="/Components_style_css/PG_workSpace/CadastroProdutos.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Cabeçalho fixo -->
+<div class="sticky-header">
+  <div class="header-container">
+    <p><span class="work">SpaceProduto</span></p>
+    <span class="voltar-btn-wrapper" id="voltar-produto-btn" title="Página WorkSpace">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+           class="voltar-btn-icon bi bi-backspace-fill" viewBox="0 0 16 16">
+        <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z"/>
+      </svg>
+    </span>
+  </div>
+</div>
+
+
+
+
+<div class="box-container">
+  <div class="box-boas-vindas-produto">
+    <h2>Cadastro de Produto</h2>
+  </div>
+
+  <form id="form-produto" class="form-centralizado">
+    <!-- Categoria -->
+    <div class="selecione-categoria">
+  Selecione a categoria
+</div>
+
+    <button type="button" class="btn btn-secondary" id="btn-abrir-modal">
+      📂 Categoria
+    </button>
+
+    <div id="categoria-exibida" class="categoria-selecionada">
+      <span class="placeholder">Nenhuma categoria selecionada</span>
+    </div>
+    <input type="hidden" id="categoria" name="categoria">
+
+    <!-- Nome -->
+    <label class="label-cadastro" for="nome-produto">Nome do produto</label>
+    <input type="text" id="nome-produto" class="input-produto" placeholder="Digite o nome">
+
+    
+<label class="label-cadastro" for="preco-produto">Preço</label>
+<input type="text" id="preco-produto" class="input-produto" placeholder="R$ 0,00">
+<small id="aviso-preco" style="color: red; display: none;"></small>
+
+
+    <!-- Descrição -->
+    <label class="label-cadastro" for="descricao-produto">Descrição do produto</label>
+    <textarea id="descricao-produto" rows="3" class="input-produto" placeholder="Descrição..." maxlength="200"></textarea>
+    <div id="contador-descricao">0 / 200</div>
+
+
+      <input type="hidden" id="categoria" name="categoria" required>
+
+      <div class="botoes-lado-a-lado">
+        <button type="button" class="btn btn-secondary" id="btn-toggle-lista">📦 Mostrar Produtos</button>
+        <button type="submit" class="btn btn-primary">📄 Cadastrar</button>
+        
+        <button type="button" class="btn btn-secondary" 
+                onclick="window.location.href='/API_html/PG_workSpace/CadastroCategorias.html'">
+          Ir para Categoria ➡️
+        </button>
+      </div>
+    </form>
+
+    <!-- Bloco de produtos -->
+    <div id="bloco-lista-produtos" class="lista-produtos" style="display: none; margin-top: 1rem;">
+      <div class="lista-produtos-actions botoes-lado-a-lado">
+        <button type="button" class="btn btn-secondary" id="btn-selecionar-todos">Selecionar Todos</button>
+        <button type="button" class="btn btn-secondary" id="btn-deselecionar-todos">Desmarcar Todos</button>
+        <button type="button" class="btn btn-danger" id="btn-excluir-selecionados">Excluir Selecionados</button>
+      </div>
+
+      <div class="lista-produtos-header">
+        <div><input type="checkbox" id="check-todos-produtos"></div>
+        <div>ID</div>
+        <div>Nome</div>
+        <div>Preço</div>
+        <div>Descrição</div>
+        <div>Categoria</div>
+        <div class="acoes">Ações</div>
+      </div>
+
+      <div id="produtos-container"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal de seleção de categorias -->
+<div id="modal-categoria" class="modal-categoria" style="display: none;">
+  <div class="modal-container">
+    <h3 class="titulo-categoria">Escolha a Categoria</h3>
+
+    <div class="modal-actions botoes-lado-a-lado">
+      <button type="button" id="btn-selecionar-todos-modal" class="btn btn-secondary">Selecionar Todos</button>
+      <button type="button" id="btn-deselecionar-todos-modal" class="btn btn-secondary">Desmarcar Todos</button>
+      <button type="button" id="btn-excluir-selecionados-modal" class="btn btn-danger">Excluir Selecionados</button>
+    </div>
+
+    <ul id="lista-categorias">
+      <li><span>Bone 000</span><div>✏️ 🗑️</div></li>
+      <li><span>Calça</span><div>✏️ 🗑️</div></li>
+      <li><span>Calça kyttttttttttttt</span><div>✏️ 🗑️</div></li>
+    </ul>
+
+    <div class="modal-footer botoes-lado-a-lado">
+      <button type="button" id="btn-fechar-modal" class="btn btn-secondary">Fechar</button>
+      <button type="button" id="btn-confirmar-categorias" class="btn btn-primary">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Biblioteca AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Script principal -->
+<script src="/Components_Js/PG_workSpace/CadastroProdutos.js" defer></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Botão voltar
+  const voltarBtn = document.getElementById("voltar-produto-btn");
+  if (voltarBtn) {
+    voltarBtn.addEventListener("click", () => {
+      if (history.length > 1) history.back();
+      else window.location.href = "/API_html/07_PG_workspace.html";
+    });
+  }
+
+  // Inicializar animações
+  AOS.init({ duration: 2000, disable: 'mobile' });
+});
+</script>
+
+</body>
+</html>

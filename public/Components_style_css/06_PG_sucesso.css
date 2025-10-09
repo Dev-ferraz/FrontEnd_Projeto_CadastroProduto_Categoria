@@ -1,0 +1,131 @@
+/* ==============================
+   Página de Sucesso - Estilo Unificado
+   ============================== */
+
+/* Efeito de brilho pulsante */
+@keyframes brilho-pulsante-laranja {
+  0% {
+    filter: drop-shadow(0 0 6px #ffffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 13px #32bcad);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #32bcad);
+  }
+}
+
+
+/* Container principal da página */
+.box-sucesso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #222; /* fundo escuro igual login */
+  padding: 4.3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 4px 10px #32bcad;
+  width: 100%;
+  max-width: 380px;
+  margin: 5rem auto;
+  text-align: center;
+  position: relative;
+  margin-top: 43px;
+  top: 15px;
+  
+}
+
+/* Logo principal de sucesso */
+.logo-sucesso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo-img-sucesso {
+  width: 85px;
+  height: auto;
+  filter: drop-shadow(0 0 6px #000000);
+  animation: brilho-pulsante-laranja 2s infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  position: relative;
+  top: 63px;
+  
+}
+
+.logo-img-sucesso:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px #000000);
+}
+
+/* Logo secundária (escrita/dinossauro) */
+.logo-escrita-dinossauro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+  top: -7px;
+}
+
+.logo-img-escrita-dinossauro {
+  width: 61px;
+  height: auto;
+  filter: drop-shadow(0 0 6px #ffffff);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-img-escrita-dinossauro:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #ffffff);
+}
+
+/* Título principal */
+.titulo-sucesso h2,
+.titulo-dois h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  color: #ffffff; /* laranja brilhante */
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  filter: drop-shadow(0 0 6px #000000);
+  transition: filter 0.3s ease;
+}
+
+.titulo-sucesso h2:hover,
+.titulo-dois h2:hover {
+  filter: drop-shadow(0 0 12px #000000);
+}
+
+.centralizar {
+  display: block;
+  text-align: center;
+}
+
+/* Botão de sucesso */
+.botao-sucesso {
+  width: 310px;
+  max-width: 115%;
+  padding: 0.7rem;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+   font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1a1a1a;
+  transition: background 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+  position: relative;
+  margin-top: 35px;
+}
+
+.botao-sucesso:hover {
+  background: #32bcad;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #000000);
+}

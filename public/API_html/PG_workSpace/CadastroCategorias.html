@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página API_CadastroCategoria</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/Components_style_css/reset.css">
+  <link rel="stylesheet" href="/Components_style_css/typograph.css">
+  <link rel="stylesheet" href="/Components_style_css/PG_workSpace/CadastroCategorias.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Scripts globais -->
+  <script type="module" src="/Components_Js/global.js"></script>
+  <script type="module" src="/Components_Js/PG_workSpace/CadastroCategorias.js"></script>
+</head>
+
+<body>
+
+<!-- Cabeçalho fixo no topo -->
+<div class="sticky-header">
+  <div class="header-container">
+    <p><span class="work">SpaceCadastro</span></p>
+
+    <span class="voltar-btn-wrapper" id="voltar-btn" title="Página WorkSpace">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="voltar-btn-icon bi bi-backspace-fill" viewBox="0 0 16 16">
+        <path
+          d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z" />
+      </svg>
+    </span>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const voltarBtn = document.getElementById("voltar-btn");
+    if (voltarBtn) {
+      voltarBtn.addEventListener("click", () => {
+        if (history.length > 1) {
+          history.back(); // volta para a página anterior
+        } else {
+          window.location.href = "/API_html/07_PG_workspace.html"; // fallback seguro
+        }
+      });
+    }
+  });
+</script>
+
+
+  <!-- Conteúdo principal -->
+  <div class="box-boas-vindas" data-aos="">
+    <div class="logo-categoria">
+      <img src="/Components_imgs_site/categoria.svg" alt="Logo Categoria" class="logo-img-categoria" data-aos="zoom-in">
+    </div>
+
+    <h2>Cadastro de Categoria</h2>
+
+    <form id="form-categoria">
+      <div class="campo-formulario">
+        <label for="nome" class="label-categoria">Cadastrar categoria</label>
+        <input type="text" id="nome" required placeholder="Digite o nome da categoria:">
+      </div>
+
+      <button type="submit" class="btn-cadastrar">Cadastrar</button>
+    </form>
+
+    <a href="/API_html/PG_workSpace/CadastroProdutos.html" class="btn-ir-produtos" id="link-produtos">
+      📦 Ir para Produtos
+    </a>
+  </div>
+
+  <!-- Biblioteca de animação -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000,
+      disable: 'mobile'
+    });
+  </script>
+</body>
+
+</html>

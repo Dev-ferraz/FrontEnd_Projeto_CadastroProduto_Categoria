@@ -1,0 +1,262 @@
+/* ==============================
+   Estilos Página Home / Pedido
+   ============================== */
+
+/* ===== Cabeçalho fixo ===== */
+
+.sticky-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #222;
+  box-shadow: 0px 4px 10px  #32bcad;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-escrita {
+  width: 52px;
+  height: auto;
+  position: relative;
+  top: 2px ;
+}
+
+/* Espaço para não deixar o conteúdo invadir o header */
+body {
+  padding-top: 100px; /* altura aproximada do header */
+}
+
+/* Ícone de logout */
+.logout-icon-wrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-icon {
+  width: 28px;
+  height: 28px;
+  color: #dadada; 
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logout-icon-wrapper:hover .logout-icon {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #ffffff);
+}
+
+/* ===== Logo central ===== */
+.logo-login {
+  margin: 0 auto 1.5rem auto; /* centralizada e com espaçamento */
+  text-align: center;
+}
+
+@keyframes brilho-pulsante {
+ 0% {
+    filter: drop-shadow(0 0 6px #ffffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 13px #32bcad);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #32bcad);
+  }
+}
+
+.logo-img-login {
+  width: 11px;
+  height: auto;
+  filter: drop-shadow(0 0 6px #ff9800);
+  transition: transform 0.3s ease;
+  animation: brilho-pulsante 2s infinite;
+  position: relative;
+  top: 7px;
+
+  
+}
+
+.logo-img-login:hover {
+  transform: scale(1.1);
+}
+
+
+/* ===== Caixa principal ===== */
+.box-01 {
+  background: #222;
+  padding: 5.5rem 2.2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 4px 10px #32bcad;
+  width: 100%;
+  max-width: 600px; /* <-- largura aumentada */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 1px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* animação suave */
+   height: 630px; /* altura fixa, ajuste conforme necessidade */
+}
+
+/* Hover com efeito semelhante ao card */
+.box-01:hover {
+  
+}
+
+
+/* ===== Botão Efetuar Pedido ==================================================== */
+.cadastrar-entrar {
+  width: 320px;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+   font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1a1a1a;
+  transition: background 0.3s ease,
+  transform 0.3s ease,filter 0.3s ease;
+  position: relative;
+  top: 50px;
+}
+
+.cadastrar-entrar:hover {
+  background: #32bcad;
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 10px #000000);
+}
+
+.work {
+  font-weight: bold;
+  color: #dadada;    
+  font-size: 15px;
+  position: relative;
+  top: -5px;
+  right: 10px;
+}
+
+
+/* ==============================
+   Estilos Adicionais Workspace
+   ============================== */
+
+
+/* Inputs genéricos para cadastro de categoria/produto */
+.box-01 form input[type="text"],
+.box-01 form input[type="number"],
+.box-01 form select {
+  width: 320px;
+  padding: 0.7rem;
+  margin: 0 auto 1rem auto;
+  border: none;
+  border-radius: 0.8rem;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  
+
+  
+}
+
+.box-01 form input:focus,
+.box-01 form select:focus {
+  background: #444;
+  box-shadow: 0px 0px 6px #32bcad;
+}
+
+
+
+/* Container dos botões principais */
+.btn-container {
+  display: flex;
+  flex-direction: column; /* sempre em coluna */
+  gap: 1rem;              /* espaçamento entre os botões */
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 320px;       /* largura parecida com inputs */
+}
+
+
+
+
+/* Botão padrão já existe (.cadastrar-entrar), 
+   aqui só ajustamos para caber bem no fluxo */
+.box-01 form .cadastrar-entrar {
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Escrita opção */
+.subtitulo-box {
+  color: #ffffff;          /* cor clara para contraste no fundo escuro */
+  font-size: 0.9rem;          /* tamanho padrão legível */
+  margin-top: 0.5rem;       /* espaço acima do parágrafo */
+  margin-bottom: 1.5rem;    /* espaço abaixo do parágrafo */
+  text-align: center;       /* centraliza o texto */
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  top: 130px;
+ 
+}
+
+
+/* ===== Título ===== */
+.stylenNome h5 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #32bcad;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+   font-family: 'Roboto', sans-serif;
+  position: relative;
+  top: -20px;
+}
+
+
+/* Imagem de opção (mesmo padrão do ícone cadeado) */
+.opcao-imagem {
+  margin-bottom: 1.2rem; /* mesmo espaçamento */
+  text-align: center;
+}
+
+.opcao-img {
+  width: 120px; /* mesmo tamanho do cadeado */
+  height: auto;
+  color: #f1f1f1;
+  filter: drop-shadow(0px 4px 6px #32bcad); /* mesmo padrão de sombra */
+  animation: brilho-pulsante 2s infinite; /* efeito pulsante */
+  position: relative;
+  top: 35px;
+}
+
+.opcao-img:hover {
+ 
+}
+
+
+.form-label-opcao {
+  display: block;
+  font-size: 0.8rem;             
+  color: #ffffff;                 
+ position: relative;
+  top: 50px;
+
+  letter-spacing: 0.5px;          /* espaçamento entre letras */
+  transition: color 0.3s ease;    /* efeito suave ao hover ou foco */
+   font-family: 'Roboto', sans-serif;
+}

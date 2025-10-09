@@ -1,0 +1,26 @@
+/* ----------------------
+   Reset básico e estilos globais
+------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* garante altura mínima da tela */
+    margin: 0;          /* remove margem padrão */
+    padding: 20px;
+font-family: 'Roboto', sans-serif;
+    /* Imagem de fundo */
+    background: url('/Components_imgs_site/fundo_03.jpg') no-repeat center center fixed;
+    background-size: cover; /* cobre toda a tela */
+    
+    /* Evita barras de rolagem horizontal e mantém o conteúdo fluido */
+    width: 100%;
+}

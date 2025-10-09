@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/Components_style_css/reset.css">
+  <link rel="stylesheet" href="/Components_style_css/typograph.css">
+  <link rel="stylesheet" href="/Components_style_css/05_PG_redefinirSenha.css">
+
+  <!-- Ícones e animações -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Script principal -->
+  <script type="module" src="/Components_Js/05_PG_redefinirSenha.js"></script>
+
+  <title>Página API_Redefinir_Senha</title>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="logo-cadastro-nova">
+    <img src="/Components_imgs_site/PG_05_novaSenha.svg" alt="Logo da empresa" class="logo-img-cadastro-nova" data-aos="zoom-in-down" />
+  </div>
+
+  <!-- Caixa principal -->
+  <div class="box-new-nova" data-aos="fade-down">
+    <div class="stylenNome-nova" data-aos="zoom-out">
+      <h1>CRIAR NOVA SENHA</h1>
+    </div>
+
+    <!-- Ícones ilustrativos -->
+    <div class="logo-password" data-aos="">
+      <img src="/Components_imgs_site/password.svg" alt="Ícone de senha" class="logo-img-password" />
+    </div>
+
+    <div class="logo-password-confirmar" data-aos="">
+      <img src="/Components_imgs_site/password-confirmar.svg" alt="Ícone de confirmação de senha" class="logo-img-password-confirmar" />
+    </div>
+
+    <!-- Formulário -->
+    <form id="form-redefinir-senha-nova">
+      <div class="input-senha-container">
+        <input
+          type="password"
+          id="nova-senha-novo"
+          class="input-email-novo"
+          name="novaSenha"
+          placeholder="Nova senha:"
+          required
+        />
+        <span id="toggleNovaSenha" class="toggle-senha">
+          <i class="bi bi-eye-fill"></i>
+        </span>
+      </div>
+
+      <div class="input-senha-container">
+        <input
+          type="password"
+          id="confirmar-senha-novo"
+          class="input-email-novo"
+          name="confirmarSenha"
+          placeholder="Confirme a nova senha:"
+          required
+        />
+        <span id="toggleConfirmarSenha" class="toggle-senha">
+          <i class="bi bi-eye-fill"></i>
+        </span>
+      </div>
+
+      <button type="submit" class="botao-cadastrar-novo">Redefinir senha</button>
+    </form>
+  </div>
+
+  <!-- Biblioteca AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 2000, disable: 'mobile' });
+  </script>
+</body>
+</html>

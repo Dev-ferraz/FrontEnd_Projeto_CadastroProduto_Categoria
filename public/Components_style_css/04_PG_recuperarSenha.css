@@ -1,0 +1,184 @@
+/* ==============================
+   Estilos Página Redefinir Senha
+   ============================== */
+
+/* Efeito de brilho pulsante */
+@keyframes brilho-pulsante-laranja {
+  0% {
+    filter: drop-shadow(0 0 6px #ffffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 13px #32bcad);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #32bcad);
+  }
+}
+
+
+/* Logo Reset Senha */
+.logo-reset-senha {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.logo-img-reset-senha {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0px 0px 6px #ff9800); /* brilho inicial */
+  margin-top: 34px;
+  position: relative;
+  top: 5px;
+
+  /* Transições suaves */
+  transition: transform 0.3s ease;
+
+  /* Animação de brilho pulsante */
+  animation: brilho-pulsante-laranja 2s infinite;
+}
+
+.logo-img-reset-senha:hover {
+  transform: scale(1.1); /* zoom leve */
+  /* brilho pulsante continua ativo */
+}
+
+
+/* Logo Email */
+.logo-email {
+  display: flex;              /* igual ao logo-cadeado */
+  justify-content: center;    /* centraliza horizontalmente */
+  align-items: center;        /* centraliza verticalmente */
+  margin-bottom: 1.2rem;     /* espaço em cima e embaixo */
+  position: relative;
+  top: 7px;
+  right: 5px;
+}
+
+.logo-img-email {
+  width: 57px;
+  height: auto;
+  filter: drop-shadow(0px 0px 6px #ffffff);
+  transition: transform 0.3s ease, filter 0.3s ease;
+ 
+}
+
+.logo-img-email:hover {
+  transform: scale(1.1);         /* zoom leve */
+  filter: drop-shadow(0px 0px 12px #ffffff);
+}
+
+
+
+/* Container principal */
+.reset-box-container {
+  background: #222;
+  padding: 4.6rem;
+  border-radius: 1.5rem;
+ box-shadow: 0px 4px 10px #32bcad;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título */
+.reset-title h1 {
+  margin-bottom: 1.6rem;
+  font-size: 1.5rem;
+  color: #f1f1f1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  top: -22px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Input Email */
+.reset-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1.2rem;
+  border-radius: 0.9rem;
+  background: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  text-align: left;
+  position: relative;
+  top: -24px;
+  box-shadow: 0px 2px 5px #32bcad;
+   max-width: 233px; /* controla até onde pode crescer */
+  
+}
+
+.reset-input::placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+  padding-left: 10px;
+  position: relative;
+  left: -1px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.reset-input:focus {
+  background: #444;
+  box-shadow: 0px 0px 6px #ffffff;
+}
+
+
+/* Link Voltar login */
+.sou-cadastrado-redefinir-senha {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  color: #4caf50;
+  font-family: 'Roboto', sans-serif;
+  background: none;
+  border: none;
+  position: relative;
+  top: -2px;
+  left: 89px;
+
+  /* Transições suaves */
+  transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+.sou-cadastrado-redefinir-senha:hover {
+  color: #84ff8a;
+  text-decoration: underline;
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 10px #4caf50);
+}
+
+/* Botão Enviar Link */
+.reset-button {
+  width: 300px;
+  padding: 0.7rem;
+  margin-top: 0.8rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+ font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1a1a1a;
+  position: relative;
+  top: 5px;
+
+  /* Transições suaves */
+  transition: background 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+.reset-button:hover {
+  background: #32bcad;
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 10px #000000);
+}

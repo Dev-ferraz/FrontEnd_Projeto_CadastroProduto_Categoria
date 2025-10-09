@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/Components_style_css/reset.css">
+  <link rel="stylesheet" href="/Components_style_css/typograph.css">
+  <link rel="stylesheet" href="/Components_style_css/04_PG_recuperarSenha.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+ <!-- Script principal -->
+  <script type="module" src="/Components_Js/04_PG_recuperarSenha.js"></script>
+
+
+  <title>Página API_Recuperar_Senha</title>
+</head>
+
+<body>
+
+  <!-- LOGO -->
+  <div class="logo-reset-senha">
+    <img src="/Components_imgs_site/PG_04_redefinir.svg" alt="Logo da empresa" class="logo-img-reset-senha" data-aos="zoom-in-down">
+  </div>
+
+  <!-- CONTAINER PRINCIPAL -->
+  <div class="reset-box-container" data-aos="fade-down">
+
+    <!-- TÍTULO -->
+    <div class="reset-title" data-aos="zoom-out">
+      <h1>REDEFINIR NOVA SENHA</h1>
+    </div> 
+
+    <!-- FORMULÁRIO -->
+    <form method="POST" class="reset-form">
+      
+      <input type="email" id="email-reset" name="email" class="reset-input" 
+      placeholder=" Digite seu e-mail de cadastro:" required />
+
+      <!-- Logo de email -->
+     <div class="logo-email">
+    <img src="/Components_imgs_site/email.svg" alt="Ícone de email" class="logo-img-email" data-aos="zoom-out">
+    </div>
+
+      
+      <button type="button" class="sou-cadastrado-redefinir-senha" onclick="window.location.href='/API_html/01_PG_login.html'">Volta a tela de login!</button>
+
+      <button type="button" id="botao-enviar-link" class="reset-button">Enviar Link</button>
+
+    </form>
+
+  </div>
+
+  <!-- BIBLIOTECA AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000,
+      disable: 'mobile'
+    });
+  </script>
+
+</body>
+</html>

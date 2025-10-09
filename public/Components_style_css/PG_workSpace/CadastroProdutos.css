@@ -1,0 +1,1054 @@
+/* ==============================
+   Reset e Base
+   ============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #121212;
+  color: #fff;
+}
+
+/* ==============================
+   Cabeçalho fixo
+   ============================== */
+
+.sticky-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #222;
+  box-shadow: 0px 4px 10px  #32bcad;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work {
+  font-weight: bold;
+  color: #dadada;
+  font-size: 1rem;
+}
+
+.voltar-btn-icon {
+  width: 20px;
+  height: 20px;
+  color: #dadada;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.voltar-btn-icon:hover {
+  transform: scale(1.2);
+  color: #32bcad;
+}
+
+/* ==============================
+   Box Central
+   ============================== */
+.box-container {
+  width: 100%;
+  max-width: 730px;
+  margin: 6rem auto 2rem auto;
+  padding: 2rem;
+  background: #1e1e1e;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px #32bcad;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+  position: relative;
+  top: -5px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.box-boas-vindas-produto h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #32bcad;
+  text-shadow: 0 0 8px rgba(50,188,173,0.6);
+}
+
+/* ==============================
+   Labels
+   ============================== */
+.label-cadastro {
+  font-size: 0.9rem;
+  color: #e4e4e4;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* ==============================
+   Inputs e Textarea
+   ============================== */
+.input-produto,
+#descricao-produto {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0px 2px 5px #32bcad;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.input-produto:focus,
+#descricao-produto:focus,
+.input-produto:hover,
+#descricao-produto:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 10px #32bcad;
+}
+
+#contador-descricao {
+  font-size: 0.8rem;
+  color: #ccc;
+  text-align: center;
+  margin-top: -0.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ==============================
+   Categoria Selecionada
+   ============================== */
+.categoria-selecionada {
+  width: 100%;
+  max-width: 300px;
+  min-height: 45px;
+  margin: 0 auto 1rem auto;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  background: #1f1f1f;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  box-shadow: 0 2px 6px #32bcad;
+  color: #fff;
+}
+
+.categoria-selecionada .placeholder {
+  font-style: italic;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ==============================
+   Botões
+   ============================== */
+button {
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.25s ease-in-out;
+  min-width: 120px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #32bcad, #43ffe9);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #43ffe9, #32bcad);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #32bcad, #43ffe9);
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-danger {
+  background: #fff;
+  color: #000;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #ff1e00, #ff5e50);
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Botões lado a lado */
+.botoes-lado-a-lado {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+
+
+/* ==============================
+   Bloco de Produtos - Moderno
+   ============================== */
+.lista-produtos {
+  width: 100%;
+  max-width: 900px;
+  margin: 1rem auto;
+  background: #1f1f1f;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(50,188,173,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ==============================
+   Ações da Lista
+   ============================== */
+.lista-produtos-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.lista-produtos-actions .btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 0.7rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.lista-produtos-actions .btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(50,188,173,0.4);
+}
+
+/* ==============================
+   Cabeçalho da Lista
+   ============================== */
+.lista-produtos-header {
+  display: grid;
+  grid-template-columns: 50px 60px 1fr 80px 1fr 120px 120px;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #32bcad, #43ffe9);
+  border-radius: 0.7rem;
+  text-align: center;
+}
+
+.lista-produtos-header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==============================
+   Container dos Produtos
+   ============================== */
+#produtos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Produto individual */
+.produto-item {
+  display: grid;
+  grid-template-columns: 50px 60px 1fr 80px 1fr 120px 120px;
+  background: #2a2a2a;
+  border-radius: 0.7rem;
+  padding: 0.6rem 1rem;
+  color: #fff;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.produto-item:nth-child(even) {
+  background: #333;
+}
+
+.produto-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(50,188,173,0.4);
+}
+
+/* ==============================
+   Ações do Produto - Ícones Empilhados
+   ============================== */
+.produto-item .acoes {
+  display: flex;
+  flex-direction: column; /* empilha ícones verticalmente */
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.produto-item .acoes button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.produto-item .acoes button:hover {
+  transform: scale(1.2);
+  color: #32bcad;
+}
+
+/* ==============================
+   Scroll estilizado
+   ============================== */
+#produtos-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+#produtos-container::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  border-radius: 5px;
+}
+
+#produtos-container::-webkit-scrollbar-thumb {
+  background-color: #32bcad;
+  border-radius: 5px;
+}
+
+#produtos-container::-webkit-scrollbar-thumb:hover {
+  background-color: #43ffe9;
+}
+
+
+
+
+/* ==============================
+   Modal Categoria
+   ============================== */
+/* 🔹 Fundo de sobreposição do modal */
+.modal-categoria {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(15, 15, 15, 0.6);
+  z-index: 999;
+}
+
+/* 🔹 Conteúdo central do modal */
+.modal-categoria .modal-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  position: relative;
+  left: 29%;
+  top: 20%;
+}
+
+
+/* 🔹 Título do modal */
+.titulo-categoria {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* 🔹 Ações principais (Selecionar / Desmarcar / Excluir) */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.modal-actions .btn {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #ccc;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #b52b27;
+}
+
+/* 🔹 Lista de categorias */
+#lista-categorias {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 280px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+#lista-categorias li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+#lista-categorias li:hover {
+  background: #f0f0f0;
+}
+
+/* Ícones e textos das categorias */
+#lista-categorias li span {
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* 🔹 Rodapé do modal (Fechar / Adicionar) */
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-footer .btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0062cc;
+}
+
+/* 🔹 Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+/* Container centralizado para o formulário================================= */
+.form-centralizado {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontalmente todos os elementos */
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #8f8f8f;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px #32bcad;
+  position: relative;
+  top: -13px;
+}
+
+/* Labels centralizados */
+.label-cadastro {
+  display: block;
+  text-align: center; /* centraliza o texto */
+  font-weight: 600;
+  color: #e4e4e4;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs centralizados */
+.input-produto, textarea {
+  width: 100%;
+  max-width: 350px;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  border: none;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center; /* centraliza o texto digitado */
+  box-shadow: 0px 2px 5px #32bcad;
+  transition: all 0.3s ease;
+}
+
+.input-produto:focus,
+textarea:focus {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 10px #32bcad;
+}
+
+/* Contador de descrição */
+#contador-descricao {
+  text-align: center; /* centraliza o texto do contador */
+  font-size: 0.85rem;
+  color: #cccccc;
+}
+
+/* Contador de descrição */
+#contador-descricao {
+  align-self: flex-end;
+  font-size: 0.85rem;
+  color: #752626;
+}
+
+/* Botão Categoria */
+#btn-abrir-modal {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Caixa de categorias selecionadas */
+/* Caixa de categorias selecionadas */
+.categoria-selecionada {
+  width: 100%;       /* ocupa toda a largura do container */
+  max-width: 360px;  /* limita largura máxima */
+  min-height: 2.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;   /* centraliza horizontalmente */
+}
+
+
+/* Botões do formulário em coluna com mesma largura */
+/* Container dos botões principais */
+.botoes-lado-a-lado {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 10px; /* espaço entre os botões */
+  flex-wrap: wrap; /* para quebrar linha se a tela for muito pequena */
+  margin-top: 1rem;
+  position: relative;
+  top: -25px;
+}
+
+/* Estilo geral dos botões */
+.botoes-lado-a-lado .btn {
+  flex: 1; /* todos os botões ocupam a mesma largura */
+  min-width: 150px; /* largura mínima */
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+.selecione-categoria {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente, se houver altura definida */
+  text-align: center;      /* garante centralização do texto */
+  font-size: 1rem;
+  gap: 0.3rem;             /* espaçamento entre emoji e texto */
+   font-family: 'Roboto', sans-serif;
+}
+
+
+.box-boas-vindas-produto h2 {
+  font-size: 2rem;
+  color: #32bcad;
+  text-shadow: 0 0 10px rgba(50,188,173,0.7);
+  margin-bottom: 0;
+  font-weight: 100;
+   font-family: 'Roboto', sans-serif;
+}
+
+
+
+#btn-abrir-modal {
+  width: 360px; /* define largura fixa menor */
+  padding: 0.6rem 1rem; /* mantém bom espaçamento interno */
+  text-align: center;
+  display: inline-block;
+}
+
+
+/* Botões da lista de produtos - lado a lado */
+.lista-produtos-actions,
+.modal-actions,
+.modal-footer {
+  display: flex;
+  flex-direction: row; /* horizontal */
+  gap: 0.5rem;        /* espaço entre os botões */
+  flex-wrap: wrap;    /* permite quebrar linha se a tela for pequena */
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+.lista-produtos-actions .btn,
+.modal-actions .btn,
+.modal-footer .btn {
+  flex: 1 1 auto;       /* todos ocupam a mesma largura */
+  min-width: 120px;     /* largura mínima */
+}
+
+
+/* 🔹 Grupo principal de ações */
+.botoes-acoes-principais {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.botoes-acoes-principais button {
+  width: 14rem; /* ⬅️ aumentada a largura */
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  background-color: #7b1111;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botoes-acoes-principais button:hover {
+  background-color: #a51818;
+}
+
+/* 🔹 Campo de descrição do produto ===============================================================*/
+#descricao-produto {
+  width: 100%; /* ocupa toda a largura disponível */
+  max-width: 200px; /* limita o tamanho máximo */
+  min-width: 350px;
+  padding: 0.7rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  resize: none; /* impede redimensionar manualmente */
+  font-size: 1rem;
+  background-color: #333;
+  margin-top: 0.4rem;
+ box-shadow: 0px 4px 10px #32bcad;
+ 
+}
+
+/* 🔹 Centralização e espaçamento */
+.label-cadastro[for="descricao-produto"],
+#descricao-produto,
+#contador-descricao {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: #ffffff;
+}
+
+/* 🔹 Contador de caracteres */
+#contador-descricao {
+  max-width: 600px;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: right;
+  margin-top: 0.2rem;
+}
+
+/* ==============================
+   Contador de caracteres
+   ============================== */
+#contador-descricao {
+  text-align: right;        /* Alinha à direita */
+  font-size: 0.85rem;       /* Tamanho menor */
+  color: #666;              /* Cor neutra */
+  margin-top: 0.25rem;      /* Espaço acima */
+ font-family: 'Roboto', sans-serif;
+   position: relative;
+  top: -42px; 
+  left: 140px;
+}
+
+
+/* ==============================
+   Cabeçalho da lista de produtos
+   ============================== */
+.lista-produtos-header {
+  display: grid;
+  grid-template-columns: 50px 80px 1fr 120px 1.5fr 1fr 120px;
+  align-items: center;
+  background: #1f1f1f; /* Fundo escuro elegante */
+  color: #f5f5f5;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+}
+
+/* Ajuste dos títulos individuais */
+.lista-produtos-header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+/* Checkbox alinhado à esquerda */
+.lista-produtos-header input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Coluna de ações */
+.lista-produtos-header .acoes {
+  text-align: center;
+
+}
+
+/* Container de produtos abaixo do cabeçalho */
+#produtos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+    font-size: 0.95rem;
+}
+
+.btn-cadastrar {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre ícone e texto */
+  transition: background 0.3s;
+}
+
+.btn-cadastrar:hover {
+  background-color: #0056b3;
+}
+
+/* === Botão Mostrar Produtos === */
+#btn-toggle-lista {
+  background-color: #3b82f6; /* azul moderno */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Ícone e hover */
+#btn-toggle-lista:hover {
+  background-color: #2563eb; /* azul mais escuro */
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+}
+
+/* Ao clicar */
+#btn-toggle-lista:active {
+  transform: scale(0.98);
+}
+
+/* === Placeholder de Categoria === */
+.placeholder {
+  display: inline-block;
+  color: #ececec; /* cinza suave */
+  font-size: 14px;
+  padding: 7px 65px;
+  background-color: #f3f4f6; /* fundo cinza claro */
+  border-radius: 8px;
+  border: 1px dashed #d1d5db; /* borda sutil */
+  transition: all 0.3s ease;
+  margin-top: 6px;
+  position: relative;
+  left: 2.2px;
+  top: -2.3px;
+
+}
+
+/* Efeito ao passar o mouse */
+.placeholder:hover {
+  background-color: #e5e7eb;
+  color: #6b7280;
+  
+}
+
+.categoria-selecionada .placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13.5px;                 /* Tamanho da letra */
+  font-weight: 500;                /* Negrito médio */
+  color: #555;                     /* Cor da letra */
+  font-style: normal;              /* Normal ou italic */
+  letter-spacing: 0.5px;           /* Espaçamento entre letras */
+  
+}
+
+#aviso-preco {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  display: none;
+  margin-top: 4px;
+}
+
+/* Container fixo de categorias com scroll vertical */
+.categoria-selecionada {
+  width: 360px;          /* largura fixa */
+  height: 60px;         /* altura fixa */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin: 3px;
+  display: flex;
+  align-items: center;    /* centraliza horizontalmente */
+  gap: 1.3rem;            /* espaço entre tags */
+  overflow-y: auto;       /* scroll vertical se necessário */
+}
+
+/* Tags individuais */
+.categoria-selecionada .tag {
+  background-color: #ccc;
+  color: #000;
+  padding: 0.5rem 1rem;  /* padding horizontal e vertical equilibrado */
+  border-radius: 4px;
+  display: block;        /* ocupa linha inteira dentro do container */
+  text-align: center;    /* centraliza o texto */
+  width: 90%;            /* ocupa a maior parte do container */
+  box-sizing: border-box;
+  margin: 0 auto;        /* centraliza a tag dentro do container */
+  position: static;      /* remove deslocamento manual */
+  font-size: 1rem;     /* tamanho de texto ajustável */
+  font-weight: 500;      /* opcional: deixa o texto mais legível */
+  position: relative;
+  left: 4px;
+}
+
+/* Estilização geral do texto do produto */
+/* Produto individual */
+.produto-item {
+  display: grid;
+  grid-template-columns: 17px 80px 1fr 110px 1fr 1fr  60px; 
+  /* Ajuste das colunas:
+     50px → checkbox/ID
+     100px → ID
+     1.5fr → Nome
+     120px → Preço
+     2fr → Descrição
+     1fr → Categoria
+     120px → Ações
+  */
+  background: #2a2a2a;
+  border-radius: 0.7rem;
+  padding: 0.8rem 1rem; /* aumenta o padding interno */
+  color: #fff;
+  align-items: center;
+  gap: 0.5rem; /* espaçamento interno entre elementos do grid */
+  transition: all 0.3s ease;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* Texto dentro das colunas */
+.produto-item div {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  font-weight: 500;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* Nome do produto (3ª coluna) */
+.produto-item div:nth-child(3) {
+  text-align: left;   /* alinha à esquerda para melhor leitura */
+  padding-left: 0.5rem;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* Preço (4ª coluna) */
+.produto-item div:nth-child(4) {
+  text-align: center;
+  color: #ffcc00;
+  font-weight: 700;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* Descrição (5ª coluna) */
+.produto-item div:nth-child(5) {
+  text-align: left;
+  padding-left: 0.5rem;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* Categoria (6ª coluna) */
+.produto-item div:nth-child(6) {
+  text-align: center;
+  color: #43ffe9;
+}
+
+/* Ações (7ª coluna) */
+.produto-item .acoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+
+
+/* Cabeçalho da lista de produtos */
+.lista-produtos-header {
+  display: grid;
+  grid-template-columns: 42.5px 70px 1.5fr 120px 5fr 10fr 135px; 
+  /* Ajuste das colunas para alinhar com os produtos */
+  background: #1f1f1f;
+  color: #43ffe9;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+/* Centraliza o checkbox do header */
+.lista-produtos-header div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Nome e Descrição alinhados à esquerda */
+.lista-produtos-header div:nth-child(3),
+.lista-produtos-header div:nth-child(5) {
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+/* Preço e Categoria centralizados */
+.lista-produtos-header div:nth-child(6) {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #43ffe9;
+  position: relative;
+  left: 33px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Ações centralizadas */
+.lista-produtos-header .acoes {
+  display: flex;
+  justify-content: center;
+}

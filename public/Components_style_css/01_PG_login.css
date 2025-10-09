@@ -1,0 +1,242 @@
+/* ==============================
+   Estilos Página de Login
+   ============================== */
+
+/* Efeito de brilho pulsante */
+@keyframes brilho-pulsante-laranja {
+  0% {
+    filter: drop-shadow(0 0 6px #ffffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 13px #32bcad);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #32bcad);
+  }
+}
+
+/* Logo Login */
+.logo-login {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  
+}
+
+.logo-img-login {
+  width: 85px;
+  height: auto;
+  filter: drop-shadow(0px 0px 6px #ff9800);
+  margin-top: 34px;
+  position: relative;
+  top: 20px;
+  
+
+  /* Transições suaves */
+  transition: transform 0.3s ease;
+  
+  /* Animação de brilho pulsante */
+  animation: brilho-pulsante-laranja 2s infinite;
+}
+
+.logo-img-login:hover {
+  transform: scale(1.1); /* zoom leve */
+  /* brilho já pulsante mantém o efeito */
+}
+
+
+
+/* Caixa principal */
+.box-01 {
+  background: #222;
+  padding: 5.2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 4px 10px #32bcad;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 15px;
+ 
+}
+
+/* ==========================
+   Input Email
+   ========================== */
+input[type="email"] {
+  width: 300px;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: #333;
+  color: #fff;           /* cor do texto digitado */
+  font-size: 1.1rem;     /* tamanho do texto */
+  outline: none;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0px 2px 5px #32bcad;
+}
+
+/* Placeholder do email */
+input[type="email"]::placeholder {
+  color: #aaa;           /* cor do placeholder */
+  font-size: 0.9rem;     /* tamanho do placeholder */
+}
+
+/* Efeito de foco */
+input[type="email"]:focus {
+  background: #444;
+  box-shadow: 0px 0px 6px #ffffff; /* brilho laranja igual aos outros inputs */
+}
+
+
+
+/* Texto digitado pelo usuário */
+input[type="text"],
+input[type="password"] {
+  width: 300px;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: #333;
+  color: #fff;           /* cor do texto digitado */
+  font-size: 1.1rem;     /* Aumenta só o que o usuário digita */
+  outline: none;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0px 2px 5px #32bcad;
+}
+
+/* Placeholder */
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #aaa;           /* cor do placeholder */
+  font-size: 0.9rem;     /* tamanho do placeholder separado */
+}
+
+/* Efeito de foco */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background: #444;
+  box-shadow: 0px 0px 6px #ffffff;
+}
+
+/* Título */
+.stylenNome h2 {
+  margin-bottom: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.7rem;
+  color: #f1f1f1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  top: -30px;
+}
+
+/* Ícone de mostrar senha */
+.toggle-senha-login {
+  position: absolute;
+  margin-left: -35px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #aaa;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 12.2rem;
+
+
+}
+
+.toggle-senha-login:hover {
+  color:  #32bcad;
+}
+
+/* Links estilo texto */
+.novo-cadastro,
+.recuperacao-senha {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.89rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Verde - novo cadastro */
+.novo-cadastro {
+  color: #4caf50;
+  position: relative;
+  right: 87px;
+  font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease; /* suavização */
+}
+
+.novo-cadastro:hover {
+  color: #84ff8a;
+  text-decoration: underline; 
+  transform: scale(1.1); /* efeito zoom leve */
+  filter: drop-shadow(0px 0px 10px #4caf50); /* brilho verde */
+}
+
+
+/* Azul - recuperação */
+.recuperacao-senha {
+  color: #2196f3;
+  position: relative;
+  left: 87px;
+  top: -26px;
+  font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease; /* suavização */
+}
+
+.recuperacao-senha:hover {
+  color: #9acdff;
+  text-decoration: underline; 
+  transform: scale(1.1); /* efeito zoom leve */
+  filter: drop-shadow(0px 0px 10px #2196f3); /* brilho azul */
+}
+
+
+/* Botão Entrar */
+.cadastrar-entrar {
+  width: 300px;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1a1a1a;
+  position: relative;
+  top: 10px;
+  
+  /* Transições suaves */
+  transition: background 0.3s ease, 
+              transform 0.3s ease, 
+              filter 0.3s ease;
+}
+
+.cadastrar-entrar:hover {
+  background: #32bcad;
+  transform: scale(1.05); /* zoom leve */
+  filter: drop-shadow(0px 0px 10px #000000); /* brilho laranja */
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,197 @@
+/* ==============================
+   Estilos Página Cadastro
+   ============================== */
+
+
+/* Efeito de brilho pulsante */
+@keyframes brilho-pulsante-laranja {
+  0% {
+    filter: drop-shadow(0 0 6px #ffffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 13px #32bcad);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #32bcad);
+  }
+}
+
+/* Logo Cadastro */
+.logo-cadastro {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.logo-img-cadastro {
+  width: 90px;
+  height: auto;
+  filter: drop-shadow(0px 0px 6px #ff9800); /* brilho inicial */
+  margin-top: 20px;
+  position: relative;
+  top: 30px;
+  left: 8px;
+
+  /* Transições suaves */
+  transition: transform 0.3s ease;
+
+  /* Animação de brilho pulsante */
+  animation: brilho-pulsante-laranja 2s infinite;
+}
+
+.logo-img-cadastro:hover {
+  transform: scale(1.1); /* zoom leve */
+  /* brilho pulsante continua ativo */
+}
+
+
+/* Caixa principal */
+.box-new {
+  background: #222;
+  padding: 3.7rem;
+  border-radius: 1.5rem;
+ box-shadow: 0px 4px 10px #32bcad;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 20px;
+}
+
+/* Título */
+.stylenNome h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  color: #f1f1f1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  top: -11px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Inputs */
+.cadastro-form input[type="text"],
+.cadastro-form input[type="password"],
+.cadastro-form input[type="email"] {
+  width: 300px;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  text-align: left;
+  box-shadow: 0px 2px 5px #32bcad;
+}
+
+.cadastro-form input[type="text"]::placeholder,
+.cadastro-form input[type="password"]::placeholder,
+.cadastro-form input[type="email"]::placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.cadastro-form input:focus {
+  background: #444;
+  box-shadow: 0px 0px 6px #ffffff;
+}
+
+/* Ícone de mostrar senha */
+.toggle-senha {
+  position: absolute;
+  margin-left: -35px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #aaa;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 166px;
+  left: 352px;
+}
+
+.toggle-senha:hover {
+  color:  #32bcad;
+}
+
+/* Links estilo texto */
+.sou-cadastrado,
+.verificao-cadastrado {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Verde - já cadastrado */
+.sou-cadastrado {
+  color: #4caf50;
+  position: relative;
+  right: 87px;
+  font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease; /* suavização */
+}
+
+.sou-cadastrado:hover {
+  color: #84ff8a;
+  text-decoration: underline;
+  transform: scale(1.1); /* efeito zoom leve */
+  filter: drop-shadow(0px 0px 10px #4caf50); /* brilho verde */
+}
+
+
+/* Azul - verificar cadastro */
+.verificao-cadastrado {
+  color: #2196f3;
+  position: relative;
+  left: 87px;
+  top: -26px;
+  font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease; /* suavização */
+}
+
+.verificao-cadastrado:hover {
+  color: #9acdff;
+  text-decoration: underline;
+  transform: scale(1.1); /* efeito zoom leve */
+  filter: drop-shadow(0px 0px 10px #2196f3); /* brilho azul */
+}
+
+
+/* Botão Efetuar Cadastrar */
+.botao-cadastrar {
+  width: 300px;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1a1a1a;
+  position: relative;
+  top: -5px;
+
+  /* Transições suaves */
+  transition: background 0.3s ease, 
+              transform 0.3s ease, 
+              filter 0.3s ease;
+}
+
+.botao-cadastrar:hover {
+  background: #32bcad;
+  transform: scale(1.05); /* zoom leve */
+  filter: drop-shadow(0px 0px 10px #000000); /* brilho laranja */
+}

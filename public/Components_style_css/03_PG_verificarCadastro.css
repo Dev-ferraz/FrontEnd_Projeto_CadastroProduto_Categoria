@@ -1,0 +1,198 @@
+/* ==============================
+   Estilos Página Verificação
+   ============================== */
+
+/* Efeito de brilho pulsante */
+@keyframes brilho-pulsante-laranja {
+  0% {
+    filter: drop-shadow(0 0 6px #ffffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 13px #32bcad);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #32bcad);
+  }
+}
+
+/* Logo Verificação */
+.logo-verificação {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.logo-verificação .logo {
+  width: 84px;
+  height: auto;
+  filter: drop-shadow(0px 0px 6px #ff9800); /* brilho inicial */
+  margin-top: 35px;
+  position: relative;
+  top: 20px;
+
+  /* Transições suaves */
+  transition: transform 0.3s ease;
+
+  /* Animação de brilho pulsante */
+  animation: brilho-pulsante-laranja 2s infinite;
+}
+
+.logo-verificação .logo:hover {
+  transform: scale(1.1); /* zoom leve */
+  /* brilho pulsante continua ativo */
+}
+
+
+/* Container do cadeado */
+.logo-cadeado {
+  display: flex;
+  justify-content: center;   /* centraliza horizontalmente */
+  align-items: center;       /* centraliza verticalmente */
+  margin: 1rem 0;
+  position: relative;
+              /* espaço em cima e embaixo */
+}
+
+/* Imagem do cadeado */
+.logo-cadeado .logo {
+  width: 34px;               /* tamanho fixo */
+  height: auto;              /* mantém proporção */
+  filter: drop-shadow(0px 0px 6px #ffffff); /* brilho laranja igual aos inputs */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Animação ao passar o mouse */
+.logo-cadeado .logo:hover {
+  transform: scale(1.1);     /* efeito zoom leve */
+  filter: drop-shadow(0px 0px 10px #ffffff);
+}
+
+/* Caixa principal */
+.box-verificação {
+  background: #222;
+  padding: 3.6rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 4px 10px #32bcad;
+  width: 100%;
+  max-width: 390px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 15px;
+}
+
+/* Título */
+.stylenNome h6 {
+  margin-bottom: 1.7rem;
+  font-size: 1.7rem;
+  color: #f1f1f1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  top: -5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Input Código */
+.input-codigo-verificacao {
+  width: 146px;                 /* menor para código */
+  padding: 0.3rem;              /* igual aos outros */
+  margin-bottom: 1.2rem;
+  border-radius: 1rem;
+  background: #333;
+  color: #ffffff;                /* texto branco igual aos outros */
+  font-size: 2.4rem;              /* mantém padrão (ajusta se quiser maior) */
+ font-family: 'Roboto', sans-serif;
+  outline: none;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  text-align: left;
+  position: relative;
+  top: -8px;
+  box-shadow: 0px 2px 5px #32bcad;
+}
+
+/* Placeholder no mesmo estilo */
+.input-codigo-verificacao::placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+  position: relative;
+  left: 17px;
+
+}
+/* Foco igual ao cadastro */
+.input-codigo-verificacao:focus {
+  background: #444;
+  box-shadow: 0px 0px 6px #ffffff;
+}
+
+
+/* Ícone cadeado */
+.logo-cadeado {
+  margin-bottom: 1.2rem;
+}
+
+.logo-cadeado img {
+  width: 60px;
+  height: auto;
+  filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.5));
+}
+
+
+/* Link estilo texto (já cadastrado) */
+.cadastrado-verificao {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  color: #4caf50;
+  font-family: 'Roboto', sans-serif;
+  background: none;
+  border: none;
+  position: relative;
+  top: -75px;
+
+  /* Transições suaves */
+  transition: color 0.3s ease, 
+              transform 0.3s ease, 
+              filter 0.3s ease;
+}
+
+.cadastrado-verificao:hover {
+  color: #84ff8a;
+  text-decoration: underline;
+  transform: scale(1.1); /* zoom leve */
+  filter: drop-shadow(0px 0px 10px #4caf50); /* brilho verde */
+}
+
+/* Botão Validar */
+.botao-validar {
+  width: 300px;
+  padding: 0.7rem;
+  margin-top: 0.8rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  color: #1a1a1a;
+  position: relative;
+  top: 25px;
+
+  /* Transições suaves */
+  transition: background 0.3s ease, 
+              transform 0.3s ease, 
+              filter 0.3s ease;
+}
+
+.botao-validar:hover {
+  background: #32bcad;
+  transform: scale(1.05); /* zoom leve */
+  filter: drop-shadow(0px 0px 10px #000000); /* brilho laranja */
+}
+
+
