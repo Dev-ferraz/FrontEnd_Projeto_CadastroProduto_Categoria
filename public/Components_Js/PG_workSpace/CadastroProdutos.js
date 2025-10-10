@@ -43,6 +43,56 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoriaExibida = document.getElementById("categoria-exibida");
   const categoriaContainer = document.querySelector(".categoria-selecionada");
 
+
+
+// VALIDAÇÃO E FORMATAÇÃO DE PREÇO
+// ==========================
+// VALIDAÇÃO E FORMATAÇÃO DE PREÇO (Padrão BR: 1.000,00)
+inputPreco.addEventListener("input", (e) => {
+  let valor = e.target.value.replace(/\D/g, ""); // remove tudo que não é número
+
+  // Se nada foi digitado, limpa o campo
+  if (!valor) {
+    e.target.value = "";
+    return;
+  }
+
+  // Converte para número inteiro de centavos
+  let numero = parseInt(valor, 10);
+
+  // Divide por 100 para obter reais e centavos
+  let valorFormatado = (numero / 100).toFixed(2);
+
+  // Converte ponto decimal para vírgula e adiciona separadores de milhar
+  valorFormatado = valorFormatado
+    .replace(".", ",")
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+  e.target.value = valorFormatado;
+});
+
+
+
+
+// Impede caracteres não numéricos (ex: letras ou símbolos)
+inputPreco.addEventListener("keypress", (e) => {
+  const char = String.fromCharCode(e.which);
+  if (!/[0-9]/.test(char)) {
+    e.preventDefault();
+
+    const aviso = document.getElementById("aviso-preco");
+    aviso.textContent = "⚠️ Apenas números são válidos no campo de preço!";
+    aviso.style.display = "block";
+    setTimeout(() => (aviso.style.display = "none"), 2000);
+  }
+});
+
+  
+
+
+
+
+
   // ==========================
   // ELEMENTOS DOM - CATEGORIAS
   // ==========================
@@ -377,6 +427,10 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Erro de conexão. Tente novamente.");
       console.error(err);
     }
+
+ 
+
+
   });
 
   // ==========================
@@ -422,7 +476,22 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(err.message);
       console.error(err);
     }
+
+    
   });
+
+  
+  
+  // ==========================
+  // BOTÃO VOLTAR WORKSPACE
+  // ==========================
+  const voltarBtn = document.getElementById("voltar-produto-btn");
+
+  if (voltarBtn) {
+    voltarBtn.addEventListener("click", () => {
+      window.location.href = "http://localhost:5174/API_html/07_PG_workspace.html";
+    });
+  }
 
   // ==========================
   // INICIALIZAÇÃO
