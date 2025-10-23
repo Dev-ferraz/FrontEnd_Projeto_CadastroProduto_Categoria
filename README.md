@@ -1,15 +1,44 @@
 ### 💻 Frontend
 
-Toda execução é possível dentro do VS Code, utilizando o terminal integrado.
+Toda execução é possível dentro do **VS Code**, utilizando o terminal integrado.
+
+---
+
+#### Tecnologias utilizadas
 
 - **Linguagem:** TypeScript  
 - **Versão do TypeScript:** 5.9.3  
 - **Runtime:** Node.js v22.20.0  
-
+- **VS Code:** [Baixar VS Code](https://code.visualstudio.com/Download)  
 - **Gerenciador de pacotes:** npm  
 - **Framework Front-end:** Vue.js / React / Angular (ajuste conforme seu uso)  
 - **Integração:** Consumo de API REST via HTTP (Axios / Fetch)  
-- **Estilização:** CSS moderno e responsivo  
+- **Estilização:** CSS moderno e responsivo
+
+---
+
+#### 📥 Instalação do TypeScript 5.9.3
+
+```bash
+# Instalar TypeScript globalmente
+npm install -g typescript@5.9.3
+
+# Verificar a versão instalada
+tsc --version
+
+📥 Instalação do Node.js v22.20.0
+
+Windows:
+
+Baixe o instalador MSI diretamente: Node.js v22.20.0 MSI / https://nodejs.org/dist/v22.20.0/
+
+Execute o instalador e siga os passos na tela.
+
+Verifique a instalação no terminal ou PowerShell:
+
+node -v
+npm -v
+
 
 ⚠️ **Observação:** O Docker Compose já está configurado para expor o frontend na porta correta (localhost:5174).  
 Você poderá acessar a aplicação diretamente em:  
