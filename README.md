@@ -1,5 +1,7 @@
 ### 💻 Frontend
 
+Toda execução é possível dentro do VS Code, utilizando o terminal integrado.
+
 - **Linguagem:** TypeScript  
 - **Versão do TypeScript:** 5.9.3  
 - **Runtime:** Node.js v22.20.0  
